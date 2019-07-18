@@ -1,0 +1,79 @@
+server:
+    port: 6821
+
+mybatis:
+  type-aliases-package: com.huarui.models
+  mapper-path: com.huarui.dao
+
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:6801/eureka/
+  instance:
+    instance-id: huarui_user   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+spring:
+  profiles:
+    active: dev
+  application:
+    name: huaruiuser
+
+  datasource:
+    # type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://129.28.47.9:3306/huarui_res
+    username: root
+    password: 123456
+
+
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: false
+orderQueue: orderQueue
+
+---
+spring:
+  profiles: test
+
+  application:
+    name: huaruiuser
+
+  datasource:
+    # type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://140.143.227.51:3306/huarui_res
+    username: root
+    password: 123456
+
+
+  activemq:
+    broker-url: tcp://140.143.227.51:61616
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: false
+
+
+
+eureka:
+  instance:
+    hostname: 140.143.227.51
+  client:
+    service-url:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+          defaultZone: http://140.143.227.51:6801/eureka/
+  instance:
+      instance-id: huarui_user   #自定义服务名称信息
+      prefer-ip-address: true     #访问路径可以显示IP地址
+
+
