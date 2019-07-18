@@ -43,9 +43,6 @@ orderQueue: orderQueue
 spring:
   profiles: test
 
-  application:
-    name: huaruiuser
-
   datasource:
     # type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -64,14 +61,11 @@ spring:
 
 
 eureka:
-  instance:
-    hostname: 140.143.227.51
   client:
-    service-url:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-          defaultZone: http://140.143.227.51:6801/eureka/
+      defaultZone: http://140.143.227.51:6801/eureka/
   instance:
       instance-id: huarui_user   #自定义服务名称信息
       prefer-ip-address: true     #访问路径可以显示IP地址
