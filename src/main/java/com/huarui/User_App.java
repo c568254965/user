@@ -12,6 +12,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
+
 @SpringBootApplication
 @EnableEurekaClient
 @EnableAutoConfiguration
@@ -21,9 +22,10 @@ import org.springframework.context.annotation.ComponentScan;
 //@RibbonClient(name="HUARUIDISHES",configuration = MySelfRule.class)
 @RibbonClients(value = {
 		@RibbonClient(name = "HUARUIDISHES",configuration = MySelfRule.class),
-		//@RibbonClient(name = "demo",configuration = DemoRibbonConfig.class)
+
 })
 @EnableFeignClients(basePackages = {"com.huarui"})
+
 public class User_App
 {
 	public static void main(String[] args)
