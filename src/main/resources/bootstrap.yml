@@ -1,0 +1,21 @@
+
+
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: huarui_user
+      profile: dev
+      label: master
+      uri: http://localhost:6866
+
+---
+spring:
+  profiles: test
+  cloud:
+    config:
+      name: huarui_user
+      profile: test
+      label: master
+      uri: http://140.143.227.51:6866
