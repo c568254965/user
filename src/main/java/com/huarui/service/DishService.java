@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * Created by sloan on 2019/7/15.
  */
 
-@Service("dishService")
+@Service("dishService")                              //禁用hystrix降级..configuration = FeignDisableHystrixConfiguration.class
 @FeignClient(value = "HUARUIDISHES",fallback = DishServiceFallback.class)
 public interface DishService {
 
