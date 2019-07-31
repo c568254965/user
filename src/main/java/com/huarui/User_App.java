@@ -12,6 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -35,6 +36,8 @@ public class User_App
 
 	@Bean
 	public ServletRegistrationBean getServlet(){
+
+		//AnnotationConfigApplicationContext
 
 		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
 

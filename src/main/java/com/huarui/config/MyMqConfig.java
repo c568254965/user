@@ -26,7 +26,7 @@ public class MyMqConfig {
 
 
 
-    @Bean
+    @Bean(value = "quque")
     public Queue quque(){
         return new ActiveMQQueue(orderQueue);
     }

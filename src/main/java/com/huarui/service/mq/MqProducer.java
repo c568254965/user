@@ -30,6 +30,7 @@ public class MqProducer {
         map.put("dishId",dishId);
         jmsMessagingTemplate.convertAndSend(queue,map);
 
+
         System.out.println("您点的菜已经交给后厨处理...请耐心等待");
 
     }
