@@ -12,7 +12,7 @@ spec:
     spec:
      containers:
      - name: huarui_user
-       image: c568254965/eureka-center:v1.1
+       image: c568254965/user:v1.1
        tty: true
        ports:
        - containerPort: 6821

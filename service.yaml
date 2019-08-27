@@ -9,4 +9,4 @@ spec:
        - port: 6821
          targetport: 6821
   selector:
-    app: eureka-server
+    app: huarui_user
