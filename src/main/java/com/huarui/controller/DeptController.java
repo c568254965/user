@@ -35,6 +35,7 @@ public class DeptController
 	MqProducer mqProducer;
 
 	public static String DISH_URI = "http://HUARUIDISHES";
+	public static String DISH_PREFIX = "/csrr/dish";
 
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public String get()
@@ -46,7 +47,7 @@ public class DeptController
 	public String testDish()
 	{
 
-		return myRestTemplate.initMyRestTemplate().getForObject(DISH_URI + "/get/1", String.class);
+		return myRestTemplate.initMyRestTemplate().getForObject(DISH_URI +DISH_PREFIX + "/get/1", String.class);
 	}
 
 

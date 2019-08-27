@@ -1,5 +1,7 @@
 server:
     port: 6821
+    servlet:
+      context-path: /csrr/user
 
 mybatis:
   type-aliases-package: com.huarui.models
