@@ -7,6 +7,6 @@ spec:
   type: NodePort
   ports:
        - port: 6821
-         targetport: 6821
+         targetPort: 6821
   selector:
     app: huarui-user
