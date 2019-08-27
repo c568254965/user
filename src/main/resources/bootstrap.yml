@@ -66,11 +66,11 @@ spring:
     password: admin
   jms:
     pub-sub-domain: false
-  zipkin:
-    base-url: http://140.143.227.51:6866
-  sleuth:
-    sampler:
-      probability: 1.0
+#  zipkin:
+#    base-url: http://140.143.227.51:6866
+#  sleuth:
+#    sampler:
+#      probability: 1.0
 
 
 

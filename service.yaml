@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: huarui_user
+  namespace: local
+spec:
+  type: NodePort
+  ports:
+       - port: 6821
+         targetport: 6821
+  selector:
+    app: eureka-server

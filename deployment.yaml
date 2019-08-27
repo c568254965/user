@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: huarui_user
+  namespace: local
+spec:
+  replicas: 1
+  template:
+    metadata:
+     labels:
+       app: huarui_user
+    spec:
+     containers:
+     - name: huarui_user
+       image: c568254965/eureka-center:v1.1
+       tty: true
+       ports:
+       - containerPort: 6821
