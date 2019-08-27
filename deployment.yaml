@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: huarui_user
+  name: huarui-user
   namespace: local
 spec:
   replicas: 1
   template:
     metadata:
      labels:
-       app: huarui_user
+       app: huarui-user
     spec:
      containers:
-     - name: huarui_user
+     - name: huarui-user
        image: c568254965/user:v1.1
        tty: true
        ports:
