@@ -81,7 +81,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://140.143.227.51:6801/eureka/  # docker-compose服务名...csrr-eureka
+      defaultZone: http://140.143.227.51:31801/eureka/  # docker-compose服务名...csrr-eureka
   instance:
       instance-id: huarui_user   #自定义服务名称信息
       prefer-ip-address: true     #访问路径可以显示IP地址
