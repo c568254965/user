@@ -13,6 +13,7 @@ spec:
      containers:
      - name: huarui-user
        image: c568254965/huarui_user:v1.0
+       imagePullPolicy: Always
        tty: true
        ports:
        - containerPort: 6821

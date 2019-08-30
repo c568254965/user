@@ -12,7 +12,7 @@ public class DishServiceFallback implements DishService {
     @Override
     public String get(Long id) {
 
-        System.out.println("请求失败...");
+        System.out.println("请求失败...k8s...");
         return "请求失败..k8s";
     }
 }
