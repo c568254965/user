@@ -13,6 +13,6 @@ public class DishServiceFallback implements DishService {
     public String get(Long id) {
 
         System.out.println("请求失败...");
-        return "请求失败..";
+        return "请求失败..k8s";
     }
 }

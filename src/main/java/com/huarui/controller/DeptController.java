@@ -55,7 +55,7 @@ public class DeptController
 	public String testDishFeigh()
 	{
 
-
+		System.out.println("通过feign请求....");
 		return  dishService.get(1L)+",from feign";
 	}
 
