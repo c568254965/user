@@ -6,9 +6,9 @@ import com.huarui.config.MyRestTemplate;
 import com.huarui.service.AccountService;
 import com.huarui.service.DishService;
 import com.huarui.service.mq.MqProducer;
-import com.netflix.discovery.converters.Auto;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@Slf4j
 public class DeptController
 {
 
@@ -34,13 +35,27 @@ public class DeptController
 	@Autowired
 	MqProducer mqProducer;
 
+
+
 	public static String DISH_URI = "http://HUARUIDISHES";
 	public static String DISH_PREFIX = "/csrr/dish";
 
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public String get()
 	{
+
+		log.info("this is get.....");
 		return accountService.findAccountById(1L).getName();
+
+	}
+
+	@RequestMapping(value = "/get1", method = RequestMethod.GET)
+	public String get1()
+	{
+
+		log.info("this is get1.....");
+		return accountService.findAccountById(1L).getName();
+
 	}
 
 	@RequestMapping(value = "/testDish", method = RequestMethod.GET)
