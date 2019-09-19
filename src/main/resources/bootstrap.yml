@@ -53,7 +53,8 @@ orderQueue: orderQueue
 ---
 spring:
   profiles: test
-
+  application:
+    name: huaruiuser
   datasource:
     # type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
